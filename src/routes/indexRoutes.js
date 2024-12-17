@@ -18,7 +18,10 @@ router.get("/danzantesDelFilo", function (req,res) {
 });
 
 router.get("/escultoresDeVoluntad", (req,res) => {
-    res.send("1º Ideal: Vida antes que muerte, fuerza antes que debilidad, viaje antes que destino<br>2º Ideal: Procuraré la libertad a quienes están atados");
+    res.json({
+        Title : "1º Ideal:Vida antes que muerte, fuerza antes que debilidad, viaje antes que destino",
+        Title1 : "2º Ideal: Procuraré la libertad a quienes están atados "
+    })
 });
 
 module.exports = router;
