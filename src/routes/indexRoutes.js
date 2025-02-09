@@ -26,6 +26,7 @@ router.get("/escultoresDeVoluntad", (req,res) => {//Get 5 intento con JSON
 
 router.post("/Scadrial", function (req,res) { 
     res.send("Selecciona el tipo de investidura que quieres investigar<br>/Alomancia<br>/Hemalurgia<br>/Feruquimia<br>/Metales");
+    console.log("Han entrado en el sistema de Scadrial");
 });
 router.post("/Scadrial/Alomancia", function (req,res) { 
     res.send("La alomancia es la forma de Investidura más utilizada en Scadrial.<br>Las personas que tienen una o más habilidades alománticas se denominan alománticos o alomantes, y cada poder alomántico está emparejado con un tipo de metal, que debe ser ingerido y quemado para activarse.");
