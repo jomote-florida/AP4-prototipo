@@ -24,4 +24,8 @@ router.get("/escultoresDeVoluntad", (req,res) => {//Get 5 intento con JSON
     })
 });
 
+router.post("/Scadrial", function (req,res) { 
+    res.send("Selecciona el tipo de investidura que quieres investigar<br>Alomancia<br>Hemalurgia<br>Feruquimia");
+});
+
 module.exports = router;//Comando para exportar nuestros gets al index.js
