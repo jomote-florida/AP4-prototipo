@@ -2,7 +2,7 @@ const { Router } = require('express');
 const router = Router();
 
 router.get("/", (req,res) => {//Get 1 indice
-    res.send("Hola usuario, te encuentras en el indice general<br>Marque los siguientes parametros para acceder al resto de paginas creadas<br>/corredoresDelViento<br>/rompedoresDelCielo<br>/danzantesDelFilo<br>/escultoresDeVoluntad");
+    res.send("Hola usuario, te encuentras en el indice general<br>Marque los siguientes parametros para acceder al resto de paginas creadas<br>/corredoresDelViento<br>/rompedoresDelCielo<br>/danzantesDelFilo<br>/escultoresDeVoluntad<br>Desde las rutas post debes entar en /Scadrial");
 })
 
 router.get("/corredoresDelViento", function (req,res) {//Get 2, utilizamos funcion
@@ -25,7 +25,18 @@ router.get("/escultoresDeVoluntad", (req,res) => {//Get 5 intento con JSON
 });
 
 router.post("/Scadrial", function (req,res) { 
-    res.send("Selecciona el tipo de investidura que quieres investigar<br>Alomancia<br>Hemalurgia<br>Feruquimia");
+    res.send("Selecciona el tipo de investidura que quieres investigar<br>/Alomancia<br>/Hemalurgia<br>/Feruquimia<br>/Metales");
 });
-
+router.post("/Scadrial/Alomancia", function (req,res) { 
+    res.send("La alomancia es la forma de Investidura más utilizada en Scadrial.<br>Las personas que tienen una o más habilidades alománticas se denominan alománticos o alomantes, y cada poder alomántico está emparejado con un tipo de metal, que debe ser ingerido y quemado para activarse.");
+});
+router.post("/Scadrial/hemalurgia", function (req,res) { 
+    res.send("La hemalurgia es una de las tres manifestaciones principales de la Investidura en Scadrial. Los nativos de ese mundo la consideran una de las tres Artes Metálicas. Los practicantes de la hemalurgia se denominan hemalurgos.");
+});
+router.post("/Scadrial/Feruquimia", function (req,res) { 
+    res.send("La feruquimia es una manifestación de Investidura de fin-neutral que permite al usuario convertir ciertos atributos en Investidura y almacenarlos en un metal con el que mantiene contacto físico, para luego recuperarlos del mismo metal.");
+});
+router.post("/Scadrial/Metales", function (req,res) { 
+    res.send("Acero<br>Hierro<br>Cinc<br>Laton<br>Peltre<br>Estaño<br>Cobre<br>Bronce<br>Duraluminio<br>Aluminio<br>Oro<br>Electrum<br>Nicrosil<br>Cromo<br>Cadmio<br>Bendaleo");
+});
 module.exports = router;//Comando para exportar nuestros gets al index.js
