@@ -5,6 +5,11 @@ router.get("/", (req,res) => {//Get 1 indice
     res.send("Hola usuario, te encuentras en el indice general<br>Marque los siguientes parametros para acceder al resto de paginas creadas<br>/corredoresDelViento<br>/rompedoresDelCielo<br>/danzantesDelFilo<br>/escultoresDeVoluntad<br>Desde las rutas post debes entar en /Scadrial");
 })
 
+router.get("/roshar",(req,res) => {
+    res.send("Selecciona tu orden de caballeros radiantes");
+    console.log("Han entrado en el sistema de Roshar");
+})
+
 router.get("/corredoresDelViento", function (req,res) {//Get 2, utilizamos funcion
     res.send("1º Ideal: Vida antes que muerte, fuerza antes que debilidad, viaje antes que destino. <br>2º Ideal: Protegeré a aquellos que no puedan protegerse a si mismos<br>3º Ideal: Protegeré incluso a quienes odie. Mientras sea lo justo.<br> 4º Ideal: Aceptaré que habrá a quienes no pueda proteger.<br>5º Ideal Para poder proteger a los demás, primero me protegeré a mi mismo");
 });
